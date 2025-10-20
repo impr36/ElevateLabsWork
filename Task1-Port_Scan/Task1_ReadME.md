@@ -18,9 +18,9 @@ Scanned 256 IPs, found 4 live hosts. High-risk findings: None detected in this h
 
 (Recommended next steps — run after you confirm hosts)
 
-* `sudo nmap -sS -T4 --open 192.168.1.0/24 -oA MainRepo/Task1-Port-Scan/scans/network_scan`
-* `sudo nmap -sS -sV -p- 192.168.1.1 -oN MainRepo/Task1-Port-Scan/scans/host-192.168.1.1-sv.txt`
-* (optional) `sudo nmap -sU -p 53,161 192.168.1.3 -oN MainRepo/Task1-Port-Scan/scans/udp-192.168.1.3.txt`
+* `sudo nmap -sS -T4 --open 192.168.1.0/24 -oA ElevateLabsWork/Task1-Port-Scan/scans/network_scan`
+* `sudo nmap -sS -sV -p- 192.168.1.1 -oN ElevateLabsWork/Task1-Port-Scan/scans/host-192.168.1.1-sv.txt`
+* (optional) `sudo nmap -sU -p 53,161 192.168.1.4 -oN ElevateLabsWork/Task1-Port-Scan/scans/udp-192.168.1.4.txt`
 
 ---
 
@@ -35,7 +35,7 @@ Scanned 256 IPs, found 4 live hosts. High-risk findings: None detected in this h
 * Next step: `sudo nmap -sS -sV -p- 192.168.1.1` to check for management ports (HTTP, HTTPS, SSH, etc.).
 * Recommendation (preliminary): Do not expose admin interfaces to WAN; ensure strong admin credentials and up-to-date firmware.
 
-### 192.168.1.3 — Vendor: Unknown (MAC: 52:04:2C:68:80:C1)
+### 192.168.1.5 — Vendor: Unknown (MAC: 52:04:2C:68:80:C1)
 
 * Observed: Host is up; MAC vendor reported as Unknown.
 * Likely device: Could be an IoT device, mobile, or other.
@@ -45,13 +45,13 @@ Scanned 256 IPs, found 4 live hosts. High-risk findings: None detected in this h
 
 * Observed: Host is up; MAC vendor Intel Corporate (commonly a laptop/desktop NIC).
 * Likely device: PC or laptop.
-* Next step: check for SSH, file sharing or remote desktop ports (e.g., 22, 445, 3389).
+* Next step: check for SSH, file sharing, or remote desktop ports (e.g., 22, 445, 3389).
 
-### 192.168.1.5 — Vendor: (not shown)
+### 192.168.1.3 — Vendor: (not shown)
 
 * Observed: Host is up (no MAC/vendor printed in this output).
-* Likely device: Could be smartphone, printer, or another host that suppressed MAC display.
-* Next step: run targeted port scan to identify services.
+* Likely device: Could be a smartphone, printer, or another host that suppressed MAC display.
+* Next step: run a targeted port scan to identify services.
 
 ---
 
@@ -71,8 +71,8 @@ Scanned 256 IPs, found 4 live hosts. High-risk findings: None detected in this h
 ## 5. Artifacts
 
 * Host discovery output: `port_scan.txt` (contains `nmap -sn` results).
-* After service scans (to be generated): `MainRepo/Task1-Port-Scan/scans/network_scan.nmap`, `.xml`, `.gnmap`.
-* Per-host service output (example): `MainRepo/Task1-Port-Scan/scans/host-192.168.1.1-sv.txt`.
+* After service scans (to be generated): `ElevateLabsWork/Task1-Port-Scan/scans/network_scan.nmap`, `.xml`, `.gnmap`.
+* Per-host service output (example): `ElevateLabsWork/Task1-Port-Scan/scans/host-192.168.1.1-sv.txt`.
 * Optional packet capture (if performed): `captures/scan.pcapng`.
 
 ---
@@ -84,19 +84,19 @@ Run these one-by-one after you confirm you have permission and are ready to enum
 **Fast SYN scan across subnet (shows only hosts with open ports):**
 
 ```
-sudo nmap -sS -T4 --open 192.168.1.0/24 -oA MainRepo/Task1-Port-Scan/scans/network_scan
+sudo nmap -sS -T4 --open 192.168.1.0/24 -oA ElevateLabsWork/Task1-Port_Scan/scans/network_scan
 ```
 
 **Service/version detection on a specific host (replace <IP>):**
 
 ```
-sudo nmap -sS -sV -p- -oN MainRepo/Task1-Port-Scan/scans/host-<IP>-sv.txt <IP>
+sudo nmap -sS -sV -p- -oN ElevateLabsWork/Task1-Port-Scan/scans/host-<IP>-sv.txt <IP>
 ```
 
 **(Optional) Selective UDP check for DNS/SNMP on a single host:**
 
 ```
-sudo nmap -sU -p 53,161 192.168.1.3 -oN MainRepo/Task1-Port-Scan/scans/udp-192.168.1.3.txt
+sudo nmap -sU -p 53,161 192.168.1.4 -oN ElevateLabsWork/Task1-Port_Scan/scans/udp-192.168.1.4.txt
 ```
 
 ---
