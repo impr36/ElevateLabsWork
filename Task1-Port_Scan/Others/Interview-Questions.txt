@@ -1,0 +1,115 @@
+1. What is an open port?
+
+Answer:
+A port is like a door or gate on a device that allows network communication.
+An open port means that the door is unlocked and waiting for connections.
+
+Example:
+Think of your computer as a house.
+Each service (like a web server or SSH) listens on a specific door number (port).
+Port 80 → HTTP (web traffic), Port 22 → SSH (remote login).
+If port 80 is open, anyone can “knock” on that door and request a web page.
+
+In short:
+Open port = service running and reachable.
+Closed port = no service listening or blocked.
+
+
+2. How does Nmap perform a TCP SYN scan?
+
+Beginner view:
+Nmap uses the TCP handshake to test which ports are open, but it does it halfway to stay stealthy.
+
+Normal handshake:
+Client → sends SYN
+Server → replies SYN-ACK
+Client → sends ACK (connection complete)
+Nmap’s SYN scan (-sS) does this:
+Sends SYN to the target port.
+If it receives SYN-ACK, the port is open.
+Nmap immediately sends RST (reset) instead of ACK — it doesn’t complete the handshake.
+This is why it’s called a half-open scan — faster and less noticeable.
+
+Example:
+
+sudo nmap -sS 192.168.1.1
+Nmap sends SYN packets to common ports; responses tell it which are open.
+
+3. What risks are associated with open ports?
+
+Simple idea:
+Every open port = a potential entry point for attackers.
+
+Risks:
+Attackers can discover services and look for known vulnerabilities (e.g., outdated SSH, FTP).
+Misconfigured or unnecessary open ports can leak sensitive data.
+Services like Telnet (port 23) send data in plain text — easy to intercept.
+Some malware scans networks for open ports to spread automatically.
+
+Example:
+If you have port 21 (FTP) open with anonymous login enabled, anyone could upload or download files — a big risk.
+
+4. Explain the difference between TCP and UDP scanning.
+Feature	TCP	UDP
+Connection type	Connection-oriented (handshake)	Connectionless
+Reliability	Reliable (acknowledgments)	Unreliable (no ack)
+Scan behavior: Nmap uses SYN/ACK replies to detect open ports. Nmap sends a UDP packet and waits for an ICMP “Port Unreachable” to tell it’s closed
+Speed	Faster, easier to interpret	Slower, less predictable
+Common ports	22 (SSH), 80 (HTTP), 443 (HTTPS)	, 53 (DNS), 161 (SNMP)
+
+Example:
+TCP scan checks if “the door opens when I knock politely.”
+UDP scan checks by “tossing a message through the mail slot and waiting to see if it bounces back.”
+
+5. How can open ports be secured?
+
+Steps:
+Close unused ports — stop or uninstall unnecessary services.
+Restrict access — allow connections only from trusted IPs (firewall rules).
+Use secure protocols — replace Telnet with SSH, HTTP with HTTPS.
+Keep software updated — patches fix known exploits.
+Enable logging — monitor unexpected access attempts.
+
+Example:
+If port 23 (Telnet) is open, disable the Telnet service and use port 22 (SSH) with key-based authentication instead.
+
+6. What is a firewall’s role regarding ports?
+
+Simple:
+A firewall acts like a security guard standing in front of your network doors (ports).
+It decides which traffic to allow, block, or monitor.
+
+Example:
+Allow only port 22 (SSH) and 443 (HTTPS) for admin access.
+Block all other inbound ports.
+If someone tries to reach a closed port, the firewall drops the packet.
+
+In short:
+Firewalls control access to ports based on rules — they prevent unwanted traffic from reaching open services.
+
+7. What is a port scan, and why do attackers perform it?
+
+Definition:
+A port scan is a method to discover which ports are open and what services are running on a device.
+Why attackers do it:
+To map the target before an attack (reconnaissance).
+To find weak points (like outdated software or default logins).
+To plan further attacks, such as exploitation or brute-force.
+
+Example:
+An attacker scans your IP and finds port 21 (FTP) open. They then try known FTP exploits to gain access.
+
+8. How does Wireshark complement port scanning?
+
+Explanation:
+Wireshark is a packet sniffer — it captures and shows real-time network traffic.
+When used with Nmap, it helps you see what’s happening under the hood.
+
+Example:
+While running an Nmap scan, open Wireshark.
+You’ll see your computer sending SYN packets to multiple ports and getting SYN-ACK or RST replies.
+This helps you understand how Nmap detects open/closed ports, and confirms that your scans are behaving as expected.
+
+In short:
+Nmap tells you which ports are open.
+Wireshark shows you how it figured that out — packet-by-packet.
