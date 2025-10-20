@@ -1,0 +1,21 @@
+-sn : ping (host discovery) only
+
+-sS : TCP SYN scan (default stealthy)
+
+-sT : TCP connect scan (no raw sockets)
+
+-sU : UDP scan
+
+-sV : service/version detection
+
+-O : OS detection (may require root)
+
+-p- : scan all TCP ports (1–65535)
+
+--open : show only hosts/ports that are open
+
+-T0..T5 : timing template (T4 is fast, T5 very aggressive)
+
+-oN/-oX/-oG/-oA : output formats (normal/xml/grepable/all)
+
+--script : run NSE scripts (use carefully)
