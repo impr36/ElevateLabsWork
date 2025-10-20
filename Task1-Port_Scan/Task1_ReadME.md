@@ -1,8 +1,8 @@
 # Task 1 — Local Network Open Ports Scan
 
-**Author:** Pratyush Raj
-**Date:** 20-10-2025
-**Network scanned:** 192.168.1.0/24
+**Author:** Pratyush Raj  
+**Date:** 20-10-2025  
+**Network scanned:** 192.168.1.0/24  
 
 ---
 
