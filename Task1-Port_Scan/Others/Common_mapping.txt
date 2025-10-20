@@ -1,0 +1,17 @@
+Common mappings:
+
+22 — SSH (may be fine if key auth and strong config)
+
+80 — HTTP (if present, inspect whether redirecting to HTTPS)
+
+443 — HTTPS (check cert, TLS version)
+
+23 — Telnet (insecure — immediate upgrade recommended)
+
+21 — FTP (plaintext; prefer SFTP/FTPS)
+
+161 — SNMP (community strings — risky if default)
+
+3306 — MySQL (should not be open to LAN if unnecessary)
+
+3389 — RDP (potentially risky if exposed and weak auth)
