@@ -1,12 +1,12 @@
 # Task 1 — Local Network Open Ports Scan
-**Author:** <Your Name>  
-**Date:** YYYY-MM-DD  
+**Author:** Pratyush Raj 
+**Date:** 2025-10-20 
 **Network scanned:** 192.168.1.0/24
 
 ---
 
 ## 1. Summary
-Scanned X IPs, found Y hosts with open ports. High-risk findings: [list e.g., Telnet on 192.168.1.5, MySQL exposed on 192.168.1.12].
+Scanned X IPs, found Y hosts with open ports. High-risk findings: [list e.g., Telnet on 192.168.1.1, MySQL exposed on 192.168.1.4].
 
 ---
 
@@ -18,18 +18,17 @@ Scanned X IPs, found Y hosts with open ports. High-risk findings: [list e.g., Te
 
 ---
 
-## 3. Top hosts (examples — replace with your findings)
-### 192.168.1.10 — Router
+## 3. Top hosts 
+### 192.168.1.1 — Mobile
 - Open ports: 80/tcp (HTTP), 443/tcp (HTTPS)
 - Risk: HTTP should redirect to HTTPS; ensure firmware is updated.
 - Recommendation: disable admin on WAN, change default creds.
 
-### 192.168.1.15 — Laptop
+### 192.168.1.4 — Laptop
 - Open ports: 22/tcp (SSH)
 - Risk: low if key-based auth; check for password auth.
 - Recommendation: enforce key auth, restrict IPs via firewall.
 
-(Repeat for other hosts)
 
 ---
 
