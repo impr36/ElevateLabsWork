@@ -1,6 +1,0 @@
-# Nmap 7.95 scan initiated Mon Oct 20 18:23:21 2025 as: /usr/lib/nmap/nmap -sS -T4 --open -oA Scans/network_scan 192.168.1.0/24
-Host: 192.168.1.1 (192.168.1.1)	Status: Up
-Host: 192.168.1.1 (192.168.1.1)	Ports: 53/open/tcp//domain///, 80/open/tcp//http///, 443/open/tcp//https///
-Host: 192.168.1.4 (192.168.1.4)	Status: Up
-Host: 192.168.1.4 (192.168.1.4)	Ports: 80/open/tcp//http///, 7070/open/tcp//realserver///	Ignored State: filtered (998)
-# Nmap done at Mon Oct 20 18:23:28 2025 -- 256 IP addresses (4 hosts up) scanned in 6.62 seconds
