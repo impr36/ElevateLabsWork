@@ -1,14 +1,16 @@
 Task 1 — Local Network Open Ports Scan
 
 Author: Pratyush Raj
-Date: 2025-10-20
+
+Date: 20-10-2025
+
 Network scanned: 192.168.1.0/24
 
 Outcome reflection
 
 Developed basic network reconnaissance skills; gained practical experience discovering live hosts on a subnet and preparing for deeper port/service scans to analyze service exposure.
 
-1. Summary
+1\. Summary
 
 Scan type: Host discovery (ping) scan only (nmap -sn). No port/service probing was performed in this run.
 
@@ -18,19 +20,19 @@ Live hosts found: 4 (192.168.1.1, 192.168.1.3, 192.168.1.4, 192.168.1.5).
 
 High-risk findings: None detected yet — this run only confirmed which hosts are online. Perform a TCP SYN (-sS) and -sV scan next to enumerate open ports and services.
 
-2. Commands used (as executed)
+2\. Commands used (as executed)
 
 Host discovery (as in screenshot):
 
-nmap -sn 192.168.1.0/24 -oN port_scan.txt
-
+nmap -sn 192.168.1.0/24 -oN port\_scan.txt
 
 (Recommended next steps — run after you confirm hosts)
 
-sudo nmap -sS -T4 --open 192.168.1.0/24 -oA scans/network_scan
-sudo nmap -sS -sV -p- <host-ip> -oN scans/host-<ip>-sv.txt
+sudo nmap -sS -T4 --open 192.168.1.0/24 -oA scans/network\_scan
 
-3. Top hosts (from this host discovery scan)
+sudo nmap -sS -sV -p- \-oN scans/host-\-sv.txt
+
+3\. Top hosts (from this host discovery scan)
 
 Note: these entries record what nmap -sn reported (IP, MAC if shown). No ports/services were discovered in this scan.
 
@@ -68,7 +70,7 @@ Likely device: Could be smartphone, printer, or another host that suppressed MAC
 
 Next step: run targeted port scan to identify services.
 
-4. Risk summary & remediation (based on current scan)
+4\. Risk summary & remediation (based on current scan)
 
 Current risk: Unknown for services — host discovery only. No open ports were enumerated in this run.
 
@@ -82,25 +84,23 @@ Apply firewall rules to limit access to management ports (allow only trusted IPs
 
 Patch firmware/software for router and endpoints. Change default credentials on network devices.
 
-5. Artifacts (from this session)
+5\. Artifacts (from this session)
 
-Host discovery output (as shown): port_scan.txt (contains nmap -sn results).
+Host discovery output (as shown): port\_scan.txt (contains nmap -sn results).
 
-For further analysis (to create and include): scans/network_scan.nmap, .xml, .gnmap (after running -sS), per-host scans/host-<ip>-sv.txt, and optional captures/scan.pcapng if you capture traffic in Wireshark.
+For further analysis (to create and include): scans/network\_scan.nmap, .xml, .gnmap (after running -sS), per-host scans/host-\-sv.txt, and optional captures/scan.pcapng if you capture traffic in Wireshark.
 
-6. Next immediate commands to run (copy-paste)
+6\. Next immediate commands to run (copy-paste)
 
 Run these one-by-one after you confirm you have permission and are ready to enumerate services:
 
 Fast SYN scan across subnet (shows only hosts with open ports):
 
-sudo nmap -sS -T4 --open 192.168.1.0/24 -oA MainRepo/Task1-Port-Scan/scans/network_scan
+sudo nmap -sS -T4 --open 192.168.1.0/24 -oA MainRepo/Task1-Port-Scan/scans/network\_scan
 
+Service/version detection on a specific host (replace ):
 
-Service/version detection on a specific host (replace <host-ip>):
-
-sudo nmap -sS -sV -p- <host-ip> -oN MainRepo/Task1-Port-Scan/scans/host-<host-ip>-sv.txt
-
+sudo nmap -sS -sV -p- \-oN MainRepo/Task1-Port-Scan/scans/host-\-sv.txt
 
 (Optional) If a device appears to run UDP services (DNS, SNMP), run a selective UDP check:
 
