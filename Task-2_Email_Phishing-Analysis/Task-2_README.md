@@ -132,21 +132,21 @@ Task-2_Email_Phishing-Analysis/
 ## 🖼️ Screenshots
 
 📸  
-![Hands On Lab Header View 1](Task-2_Email_Phishing-Analysis/Screenshots/HandsOnLab_Email_Header1.png)  
+![Hands On Lab Header View 1](Screenshots/HandsOnLab_Email_Header1.png)  
 
-![Hands On Lab Header View 2](Task-2_Email_Phishing-Analysis/Screenshots/HandsOnLab_Email_Header2.png)  
+![Hands On Lab Header View 2](Screenshots/HandsOnLab_Email_Header2.png)  
 
-![MXToolbox Lookup](Task-2_Email_Phishing-Analysis/Screenshots/mxtoolbox.png)  
+![MXToolbox Lookup](Screenshots/mxtoolbox.png)  
 
-![Browserling Analysis](Task-2_Email_Phishing-Analysis/Screenshots/Browserling.png)  
+![Browserling Analysis](Screenshots/Browserling.png)  
 
-![Cisco Talos Intelligence Lookup](Task-2_Email_Phishing-Analysis/Screenshots/Cisco_Talos_Intelligence.png)
+![Cisco Talos Intelligence Lookup](Screenshots/Cisco_Talos_Intelligence.png)
 
 ---
 
 ### 7. 🏅 Certificate / Proof of Completion
 
-![Completion Badge Screenshot](Task-2_Email_Phishing-Analysis/Screenshots/Screenshot 2025-10-22 190045.png)  
+![Completion Badge Screenshot](Screenshots/Completion_Badge.png)  
 
 ---
 
