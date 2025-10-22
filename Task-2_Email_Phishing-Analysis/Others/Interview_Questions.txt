@@ -1,0 +1,123 @@
+1. What is phishing?
+→ Phishing is a type of cyber-attack that tricks people into giving away sensitive information (passwords, bank details, personal data) or into performing unsafe actions (downloading malware, transferring money). Attackers craft messages — often emails — that look like they come from a trusted source (a bank, a coworker, a vendor) and use urgency, fear, or reward to push the victim to act without thinking.
+
+Example: An email appears to come from your bank with the subject “Immediate: Account suspended — verify now”. The message asks you to click a link and log in. The login page is a fake copy that captures your credentials.
+
+Why it matters: Phishing exploits human trust rather than technical vulnerabilities, and a single successful phish can lead to identity theft, fraud, or a larger network breach.
+
+2. How to identify a phishing email?
+→ Look for a combination of red flags — no single sign proves phishing, but together they build a strong case:
+
+Sender address mismatch: The From name says “Amazon Support” but the email is from promo@amaz0n-secure.com.
+
+Urgent or threatening language: “Your account will be closed in 24 hours.”
+
+Generic greeting: “Dear Customer” instead of your name.
+
+Suspicious links: Hovering shows a different URL than the visible text.
+
+Unexpected attachments: Especially .exe, .scr, .zip with executable content.
+
+Poor grammar and spelling: Many phishing mails contain odd phrasing.
+
+Header/authentication failures: SPF/DKIM/DMARC show fail or softfail.
+
+Unusual request from a coworker: “Can you buy gift cards for a client — I’ll reimburse you” — check with them directly.
+
+Example: An email says “Invoice attached” and includes invoice.zip. The sender is billing@company.com (display), but the actual sending domain is cheapmail.net and the invoice.zip contains invoice.exe. That cluster of signals indicates phishing.
+
+3. What is email spoofing?
+→ Email spoofing is forging parts of an email so it appears to come from somebody else. Attackers manipulate the visible “From” address or certain headers to impersonate a trusted sender. Spoofing can be simple (editing the display name) or technical (manipulating SMTP headers, using look-alike domains).
+
+Example: A message shows ceo@yourcompany.com as the sender, but the email actually originated from 198.51.100.23 (an unrelated IP) and the Return-Path points to payroll-help@mailbadguy.com. That’s spoofing.
+
+How defenders fight it: SPF, DKIM and DMARC help verify whether the sending server is authorized by the domain owner and whether the message is intact. But not all domains publish them correctly, so manual header checks are sometimes still needed.
+
+4. Why are phishing emails dangerous?
+→ Because they combine social engineering with technical tricks to bypass normal defenses and make users do something harmful:
+
+Credential theft: Fake login pages capture usernames/passwords.
+
+Malware delivery: Attachments or links install ransomware, remote access tools, or keyloggers.
+
+Financial fraud: Scammers trick finance teams into wiring money.
+
+Account takeover & lateral movement: Compromised accounts are used to attack other systems or people.
+
+Supply-chain or brand damage: Phishing from a compromised partner can harm your customers.
+
+Example: A successful spear-phishing message to a finance manager convinces them to transfer $50,000 to a “vendor” account. The result is immediate financial loss and an investigation that consumes organizational resources.
+
+5. How can you verify the sender’s authenticity?
+→ Use multiple checks — technical and human:
+
+Inspect the full email headers (not just the display From). Look at Received lines to trace the sending path and the originating IP.
+
+Check SPF/DKIM/DMARC results shown in the headers or in an analyzer tool. pass is good; fail or softfail is suspicious.
+
+Compare sending IP/domain against the organization’s MX and SPF records. Use MX lookups to confirm legitimate mail servers.
+
+Check WHOIS / reverse DNS for the sending IP if needed (does the IP belong to the claimed organization?).
+
+Verify by other channels: If an email from a coworker requests money or sensitive data, call or message them on an established channel to confirm.
+
+Examine links by hovering (do not click). If the URL is shortened, expand it first or scan it in VirusTotal.
+
+Check reputation services (VirusTotal, Talos, AbuseIPDB) for known malicious IPs or domains.
+
+Example: An invoice email from vendor@example.com. You check headers — SPF fails and the sending IP is in a foreign range. You call the vendor’s known phone number (found on their official website) and they say they didn’t send the invoice — the message is fake.
+
+6. What tools can analyze email headers?
+→ Practical and commonly used tools/services:
+
+MXToolbox Message Header Analyzer — parses headers and visualizes the Received chain.
+
+Built-in mail clients (Gmail “Show original”, Outlook Internet headers) — for quick access.
+
+VirusTotal — for scanning URLs and attachments (and sometimes domains/IPs).
+
+Cisco Talos / AbuseIPDB — IP reputation lookups.
+
+theHarvester / OSINT tools — for gathering related public data (whois, past leaks).
+
+AnyRun / Hybrid Analysis / VMRay — for sandboxing suspicious attachments dynamically.
+
+Browserling or an isolated VM — to open suspicious web pages safely.
+
+Example: Paste the full .eml headers into MXToolbox to get a visual map of where the message traveled and to see SPF/DKIM/DKIM results at a glance.
+
+7. What actions should be taken on suspected phishing emails?
+→ Follow a concise incident-response approach:
+
+Do not click links or open attachments.
+
+Isolate the message: Move it to a quarantine folder or mark as spam.
+
+Preserve evidence: Save the full email as .eml (or export headers) for analysis.
+
+Report it: To your security team, helpdesk, or email provider. If at work, follow your org’s reporting policy (e.g., phishing@company.com).
+
+Block or mark sender/domain if confirmed malicious (but be careful about spoofed senders).
+
+Scan the environment if someone clicked — check endpoints, run AV/EDR scans, and consider password resets for exposed accounts.
+
+Educate the user who received it — quick coaching prevents repeated mistakes.
+
+Share IOCs (Indicators of Compromise) with your SOC or threat intel team (malicious URLs, IPs, attachments hashes).
+
+Apply policy fixes — implement or fix SPF/DKIM/DMARC for your domains, enable multi-factor authentication (MFA) on accounts.
+
+Example: A user reports an email asking them to reset a password. You save the .eml, run the headers through MXToolbox and VirusTotal, confirm it’s malicious, quarantine similar messages, and force a password reset for anyone who clicked the link.
+
+8. How do attackers use social engineering in phishing?
+→ Social engineering manipulates human psychology to make victims act without due caution. Attackers use themes and techniques tailored to provoke emotional responses:
+
+Urgency / Fear: “Your account will be closed” — triggers immediate action.
+Greed / Reward: “You’ve won — claim your prize” — appeals to desire.
+Authority / Impersonation: Emails from “the CEO” or a bank — creates obedience.
+Curiosity: “See the attached photo” — entices clicks.
+Reciprocity / Familiarity: Using names, personal details, or references to company process to lower suspicion (spear-phishing).
+
+Example: A spear-phishing email to HR appears to be from the CEO and requests a confidential employee list for a “review.” Because it looks like an internal, authoritative request, HR may comply without verifying — giving attackers sensitive data.
+
+How to defend: Combine technical controls (MFA, email auth, filters) with regular user training and phishing simulations so people recognize manipulation patterns.
