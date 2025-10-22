@@ -14,8 +14,8 @@ Scanned 256 IPs, found 4 live hosts. High-risk findings: None detected in this h
 
 ## Structure
 
-Task1-Port_Scan/
-│
+Task1-Port_Scan/  
+│  
 ├── 📂 Captures/  
 │   ├── IP_addr.png  
 │   ├── NMap.png  
