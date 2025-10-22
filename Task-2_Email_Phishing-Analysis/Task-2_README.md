@@ -130,8 +130,7 @@ task-2-phishing-email-analysis/
 
 ## 🖼️ Screenshots
 
-📸 Each section includes practical evidence from the LetsDefend labs. These screenshots will be added as I progress through the exercises.
-*(Example placeholders are already added in the report file.)*
+📸 Each section includes practical evidence from the LetsDefend labs. 
 
 ---
 
@@ -144,7 +143,7 @@ Once the Let's Defend course is completed, include:
 
 These will serve as verification of the hands-on experience gained.
 
-**📸 Screenshot Placeholder:** *(Insert LetsDefend course certificate or completion proof here)*
+
 
 ---
 
