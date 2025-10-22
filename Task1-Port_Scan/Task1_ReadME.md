@@ -138,3 +138,5 @@ sudo nmap -sU -p 53,161 192.168.1.4 -oN ElevateLabsWork/Task1-Port_Scan/scans/ud
 
 **Outcome reflection**
 Developed basic network reconnaissance skills; gained practical experience discovering live hosts on a subnet and preparing for deeper port/service scans to analyze service exposure.
+
+  **© 2025 Pratyush Raj — ElevateLabs Pvt. Ltd. Cyber Security Internship**
