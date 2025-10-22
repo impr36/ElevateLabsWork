@@ -23,8 +23,7 @@ The objective was to analyze phishing emails, identify attack patterns, perform 
 4. [Lab Practice Sections](#lab-practice-sections)
 5. [Repository Structure](#repository-structure)
 6. [Screenshots](#screenshots)
-7. [How to Export Report as PDF](#how-to-export-report-as-pdf)
-8. [Certificate / Proof of Completion](#certificate--proof-of-completion)
+7. [Certificate / Proof of Completion](#certificate--proof-of-completion)
 
 ---
 
@@ -136,24 +135,12 @@ task-2-phishing-email-analysis/
 
 ---
 
-## 📤 How to Export Report as PDF
-
-You can convert the detailed report (`report/phishing-email-analysis-report.md`) to a PDF using **Pandoc**:
-
-```bash
-pandoc report/phishing-email-analysis-report.md -o report/phishing-email-analysis-report.pdf --pdf-engine=xelatex --metadata title="Phishing Email Analysis"
-```
-
-Alternatively, export directly from **VS Code → Markdown: Print to PDF** or **Google Docs**.
-
----
-
 ## 🏅 Certificate / Proof of Completion
 
-Once the LetsDefend course is completed, include:
+Once the Let's Defend course is completed, include:
 
 * Completion badge or certificate screenshot
-* LetsDefend course progress summary
+* Let's Defend course progress summary
 
 These will serve as verification of the hands-on experience gained.
 
