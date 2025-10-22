@@ -3,7 +3,7 @@
 **Project:** Cyber Security Internship — ElevateLabs Pvt. Ltd.
 **Task:** 2 — Phishing Email Analysis
 **Author:** Pratyush Raj
-**Date:** 2025-10-22
+**Date:** 22-10-2025
 **Platform Used:** LetsDefend — Phishing Email Analysis Course
 
 ---
