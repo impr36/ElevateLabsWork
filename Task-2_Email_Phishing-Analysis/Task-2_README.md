@@ -132,13 +132,13 @@ Task-2_Email_Phishing-Analysis/
 ## 🖼️ Screenshots
 
 📸  
-![Hands On Lab](Task-2_Email_Phishing-Analysis/Screenshots/HandsOnLab_Email_Header2.png)  
-![Hands On Lab](Task-2_Email_Phishing-Analysis/Screenshots/mxtoolbox.png)
+![Hands On Lab](Screenshots/HandsOnLab_Email_Header2.png)  
+![Hands On Lab](Screenshots/mxtoolbox.png)
 ---
 
 ### 7. 🏅 Certificate / Proof of Completion
 
-![Completion Badge Screenshot](Task-2_Email_Phishing-Analysis/Screenshots/Screenshot 2025-10-22 190045.png)  
+![Completion Badge Screenshot](Screenshots/Screenshot 2025-10-22 190045.png)  
 
 ---
 
