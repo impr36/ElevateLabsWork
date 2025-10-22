@@ -90,16 +90,8 @@ Each topic from the LetsDefend Phishing Email Analysis course included hands-on 
 
 > Identified modern phishing delivery mechanisms such as Google Drive or form-based scams.
 
-### 6. SOC Alerts (Hands-on)
 
-> Investigated the following incidents:
->
-> * SOC141 — Phishing URL Detected
-> * SOC140 — Phishing Mail Detected (Suspicious Task Scheduler)
-> * SOC120 — Internal-to-Internal Phishing Mail
-> * SOC114 — Malicious Attachment Detected (Phishing Alert)
-
-### 7. Challenge: Phishing Email
+### 6. Challenge: Phishing Email
 
 > Conducted end-to-end investigation of a phishing email sample, analyzed headers, and validated domain/IP authenticity.
 
@@ -108,51 +100,52 @@ Each topic from the LetsDefend Phishing Email Analysis course included hands-on 
 ## 🗂️ Repository Structure
 
 ```
-task-2-phishing-email-analysis/
-├── README.md
-├── report/
-│   ├── phishing-email-analysis-report.md
-│   ├── phishing-email-analysis-report.pdf
-│   └── screenshots/
-│       ├── screenshot-01-email-example.png
-│       ├── screenshot-02-header-view.png
-│       ├── screenshot-03-virus-total.png
-│       ├── screenshot-04-sandbox-analysis.png
-│       └── screenshot-05-soc-alert.png
-├── artifacts/
-│   ├── sample-email.txt
-│   ├── headers.txt
-│   └── letsdefend_certificate.png
-└── .gitignore
+Task-2_Email_Phishing-Analysis/  
+├── 📁 Others/  
+│ └── 📄 Interview_Questions.txt  
+│  
+├── 📁 Reports/  
+│ ├── 📄 Task 2 — Phishing Email Analysis.pdf  
+│ │  
+│ └── 📁 Screenshots/  
+│ ├── 📸 Browserling.png  
+│ ├── 📸 Browserling_test.png  
+│ ├── 📸 Cisco_Talos_Intelligence.png  
+│ ├── 📸 HandsOnLab_Email_Header1.png  
+│ ├── 📸 HandsOnLab_Email_Header2.png  
+│ ├── 📸 Intrusion_Kill_Chain.png  
+│ ├── 📸 Phising_Email.png  
+│ ├── 📸 Sample_email.png  
+│ ├── 📸 Screenshot_2025-10-22_190045.png  
+│ ├── 📸 SuperTool_MXLookUp.png  
+│ ├── 📸 email-header.png  
+│ ├── 📸 mxtoolbox.png  
+│ ├── 📸 outlook2.png  
+│ ├── 📸 received-header.png  
+│ └── 📸 sample-subject_header.png  
+│  
+└── 📄 Task-2_README.md  
 ```
 
 ---
 
 ## 🖼️ Screenshots
 
-📸 Each section includes practical evidence from the LetsDefend labs. 
+📸  
+![Hands On Lab](Task-2_Email_Phishing-Analysis/Screenshots/HandsOnLab_Email_Header2.png)  
+![Hands On Lab](Task-2_Email_Phishing-Analysis/Screenshots/mxtoolbox.png)
+---
+
+### 7. 🏅 Certificate / Proof of Completion
+
+![Completion Badge Screenshot](Task-2_Email_Phishing-Analysis/Screenshots/Screenshot 2025-10-22 190045.png)  
 
 ---
 
-## 🏅 Certificate / Proof of Completion
+## 💬 Key Concepts
 
-Once the Let's Defend course is completed, include:
-
-* Completion badge or certificate screenshot
-* Let's Defend course progress summary
-
-These will serve as verification of the hands-on experience gained.
-
-
-
----
-
-## 💬 Commit Message Template
-
-```bash
-git add .
-git commit -m "Task 2: Add LetsDefend phishing email analysis report and screenshots"
-git push origin main
+```
+Phishing, email spoofing, header analysis, social engineering, threat detection
 ```
 
 ---
