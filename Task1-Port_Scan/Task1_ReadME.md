@@ -16,36 +16,36 @@ Scanned 256 IPs, found 4 live hosts. High-risk findings: None detected in this h
 
 Task1-Port_Scan/
 │
-├── 📂 Captures/
-│   ├── IP_addr.png
-│   ├── NMap.png
-│   ├── Wireshark01.png
-│   ├── Wireshark02.png
-│   ├── ifconfig.png
-│   └── port192.168.1.4.pcapng
-│
-├── 📂 Others/
-│   ├── Common_mapping.txt
-│   ├── Interview-Questions.txt
-│   └── Nmap_Cheat-Sheet.txt
-│
-├── 📂 Reports/
-│   └── Task 1.pdf
-│
-├── 📂 Scans/
-│   ├── UDP-Scan.txt
-│   ├── host-192.168.1.1-sv.txt
-│   ├── host-192.168.1.3-sv.txt
-│   ├── host-192.168.1.4-sv.txt
-│   ├── host-192.168.1.5-sv.txt
-│   ├── network_scan.gnmap
-│   ├── network_scan.nmap
-│   ├── network_scan.xml
-│   └── port_scan.txt
-│
-├── Task1_ReadME.md
-
----
+├── 📂 Captures/  
+│   ├── IP_addr.png  
+│   ├── NMap.png  
+│   ├── Wireshark01.png  
+│   ├── Wireshark02.png  
+│   ├── ifconfig.png  
+│   └── port192.168.1.4.pcapng  
+│  
+├── 📂 Others/  
+│   ├── Common_mapping.txt  
+│   ├── Interview-Questions.txt  
+│   └── Nmap_Cheat-Sheet.txt  
+│  
+├── 📂 Reports/  
+│   └── Task 1.pdf  
+│  
+├── 📂 Scans/  
+│   ├── UDP-Scan.txt  
+│   ├── host-192.168.1.1-sv.txt  
+│   ├── host-192.168.1.3-sv.txt  
+│   ├── host-192.168.1.4-sv.txt  
+│   ├── host-192.168.1.5-sv.txt  
+│   ├── network_scan.gnmap  
+│   ├── network_scan.nmap  
+│   ├── network_scan.xml  
+│   └── port_scan.txt  
+│  
+├── Task1_ReadME.md  
+  
+---  
 
 ## 2. Commands used
 
