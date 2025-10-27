@@ -75,7 +75,7 @@ Capture live network packets and identify basic protocols and traffic types usin
 ## 10. Key Concepts
 
 ```
-Phishing, email spoofing, header analysis, social engineering, threat detection
+Packet capture, protocol analysis, TCP/IP, network troubleshooting, filtering
 ```
 
 
