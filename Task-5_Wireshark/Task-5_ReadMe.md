@@ -15,13 +15,12 @@ Capture live network packets and identify basic protocols and traffic types usin
 - Capture file: `capture_task5.pcap`
 
 ## 3. Capture Details
-- Capture start time: `[YYYY-MM-DD HH:MM:SS]`
-- Capture end time: `[YYYY-MM-DD HH:MM:SS]`
-- Duration: `[seconds]`
-- Total packets captured: `[N]`
-- Capture file size: `[e.g., 1.2 MB]`
+- Capture start time: `2025-10-27 18:28:14`
+- Capture end time: `2025-10-27 18:29:01`
+- Duration: `47`
+- Total packets captured: `[100]`
 - Interface used: `[interface]`
-- Capture method: `[Wireshark GUI / tshark / tcpdump]`
+- Capture method: `[Wireshark GUI]`
 - Capture filename: `capture_task5.pcap` (attached)
 
 ## 4. Steps performed
