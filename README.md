@@ -78,7 +78,7 @@ Through continuous learning, daily hands-on tasks, and expert mentorship, I’m 
 ## 🔗 Connect
 
 * **Organization:** ElevateLabs Pvt. Ltd.
-* **Program Partner:** Skill India
+* **Program Partner:** Skill India and Ministry of MSME
 * **Author:** Pratyush Raj
 * **Repository:** ElevateLabsWork
 
