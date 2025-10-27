@@ -50,3 +50,33 @@ Capture live network packets and identify basic protocols and traffic types usin
 
 ## 7. Analysis procedure (how to reproduce)
 - Capture:
+
+- Open in Wireshark and view:
+- `Statistics → Protocol Hierarchy`
+- `Statistics → Conversations`
+- Useful display filters:
+- `dns`, `http`, `tls`, `tcp`, `icmp`, `arp`
+
+## 8. Conclusion & recommendations
+- Summary: `[short summary of what you found — e.g., "DNS, ICMP, HTTP and TLS traffic seen; no suspicious traffic observed"]`
+- Recommendations:
+- Use `tcpdump`/`tshark` for automated captures.
+- Capture longer traffic if investigating intermittent issues.
+- If suspicious traffic is found, correlate with logs (firewall, IDS).
+
+## 9. Appendix
+- Filters used:
+- `dns`, `http`, `icmp`, `tcp`, `tls`, `arp`
+- Capture file: `capture_task5.pcap` (attached in repo)
+- Screenshots:
+- `protocol_hierarchy.png`
+- `tcp_stream_example.png`
+
+## 10. Key Concepts
+
+```
+Phishing, email spoofing, header analysis, social engineering, threat detection
+```
+
+
+**© 2025 Pratyush Raj — ElevateLabs Pvt. Ltd. Cyber Security Internship**
