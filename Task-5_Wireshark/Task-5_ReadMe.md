@@ -11,7 +11,7 @@ Capture live network packets and identify basic protocols and traffic types usin
 ## 2. Tools & Setup
 - Wireshark version: `[wireshark --version output or install version]`
 - tshark / tcpdump (optional)
-- System user: `[your username]`
+- System user: `bunny@kali`
 - Capture file: `capture_task5.pcap`
 
 ## 3. Capture Details
